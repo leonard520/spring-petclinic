@@ -1,0 +1,105 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------< org.springframework.samples:visit-service >--------------
+[INFO] Building Visit Service 1.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.1:run (default-cli) > test-compile @ visit-service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ visit-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ visit-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ visit-service ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ visit-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.4.1:run (default-cli) < test-compile @ visit-service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.4.1:run (default-cli) @ visit-service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2026-01-23T20:38:54.479+08:00  INFO 50608 --- [visit-service] [           main] o.s.s.p.visit.VisitServiceApplication    : Starting VisitServiceApplication using Java 21.0.5 with PID 50608 (/Users/xiading/workspace/spring-petclinic/microservices/visit-service/target/classes started by xiading in /Users/xiading/workspace/spring-petclinic/microservices/visit-service)
+2026-01-23T20:38:54.484+08:00  INFO 50608 --- [visit-service] [           main] o.s.s.p.visit.VisitServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-01-23T20:38:54.512+08:00  INFO 50608 --- [visit-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-01-23T20:38:54.512+08:00  INFO 50608 --- [visit-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=visit-service, profiles=[default], label=null, version=null, state=null
+2026-01-23T20:38:55.015+08:00  INFO 50608 --- [visit-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-23T20:38:55.090+08:00  INFO 50608 --- [visit-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 1 JPA repository interface.
+2026-01-23T20:38:55.263+08:00  INFO 50608 --- [visit-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4f864068-9661-3cc7-8d6d-c1adc68a8343
+2026-01-23T20:38:55.622+08:00  INFO 50608 --- [visit-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2026-01-23T20:38:55.626+08:00  INFO 50608 --- [visit-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-23T20:38:55.627+08:00  INFO 50608 --- [visit-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-01-23T20:38:55.654+08:00  INFO 50608 --- [visit-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-23T20:38:55.655+08:00  INFO 50608 --- [visit-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1141 ms
+2026-01-23T20:38:55.910+08:00  INFO 50608 --- [visit-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-23T20:38:55.937+08:00  INFO 50608 --- [visit-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2026-01-23T20:38:55.953+08:00  INFO 50608 --- [visit-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-23T20:38:56.064+08:00  INFO 50608 --- [visit-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-23T20:38:56.075+08:00  INFO 50608 --- [visit-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-23T20:38:56.165+08:00  INFO 50608 --- [visit-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:visitdb user=SA
+2026-01-23T20:38:56.166+08:00  INFO 50608 --- [visit-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-23T20:38:56.176+08:00  WARN 50608 --- [visit-service] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-23T20:38:56.187+08:00  INFO 50608 --- [visit-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-23T20:38:56.558+08:00  INFO 50608 --- [visit-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-23T20:38:56.559+08:00  INFO 50608 --- [visit-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-23T20:38:56.863+08:00  INFO 50608 --- [visit-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'pet-service' URL not provided. Will try picking an instance via load-balancing.
+2026-01-23T20:38:57.644+08:00  INFO 50608 --- [visit-service] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:visitdb'
+2026-01-23T20:38:57.697+08:00  INFO 50608 --- [visit-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-01-23T20:38:57.733+08:00  WARN 50608 --- [visit-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-01-23T20:38:57.747+08:00  INFO 50608 --- [visit-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-01-23T20:38:57.782+08:00  INFO 50608 --- [visit-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-01-23T20:38:57.791+08:00  INFO 50608 --- [visit-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-01-23T20:38:57.792+08:00  INFO 50608 --- [visit-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-01-23T20:38:57.795+08:00  INFO 50608 --- [visit-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-01-23T20:38:57.795+08:00  INFO 50608 --- [visit-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-01-23T20:38:57.795+08:00  INFO 50608 --- [visit-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-01-23T20:38:57.795+08:00  INFO 50608 --- [visit-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-01-23T20:38:57.795+08:00  INFO 50608 --- [visit-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-01-23T20:38:57.795+08:00  INFO 50608 --- [visit-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-01-23T20:38:57.795+08:00  INFO 50608 --- [visit-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-01-23T20:38:57.900+08:00  INFO 50608 --- [visit-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-01-23T20:38:57.901+08:00  INFO 50608 --- [visit-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-01-23T20:38:57.901+08:00  INFO 50608 --- [visit-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-01-23T20:38:57.902+08:00  INFO 50608 --- [visit-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1769171937901 with initial instances count: 0
+2026-01-23T20:38:57.908+08:00  INFO 50608 --- [visit-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application VISIT-SERVICE with eureka with status UP
+2026-01-23T20:38:57.909+08:00  INFO 50608 --- [visit-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1769171937909, current=UP, previous=STARTING]
+2026-01-23T20:38:57.909+08:00  INFO 50608 --- [visit-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_VISIT-SERVICE/192.168.0.108:visit-service:8083: registering service...
+2026-01-23T20:38:57.921+08:00  INFO 50608 --- [visit-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2026-01-23T20:38:57.922+08:00  INFO 50608 --- [visit-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2026-01-23T20:38:57.938+08:00  INFO 50608 --- [visit-service] [           main] o.s.s.p.visit.VisitServiceApplication    : Started VisitServiceApplication in 3.896 seconds (process running for 4.21)
+2026-01-23T20:38:57.938+08:00  INFO 50608 --- [visit-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_VISIT-SERVICE/192.168.0.108:visit-service:8083 - registration status: 204
+2026-01-23T20:39:21.050+08:00  INFO 50608 --- [visit-service] [nio-8083-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-23T20:39:21.050+08:00  INFO 50608 --- [visit-service] [nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-23T20:39:21.051+08:00  INFO 50608 --- [visit-service] [nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-23T20:39:27.906+08:00  INFO 50608 --- [visit-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-01-23T20:39:27.907+08:00  INFO 50608 --- [visit-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-01-23T20:39:27.907+08:00  INFO 50608 --- [visit-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-01-23T20:39:27.907+08:00  INFO 50608 --- [visit-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-01-23T20:39:27.907+08:00  INFO 50608 --- [visit-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-01-23T20:39:27.907+08:00  INFO 50608 --- [visit-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-01-23T20:39:27.907+08:00  INFO 50608 --- [visit-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-01-23T20:39:27.925+08:00  INFO 50608 --- [visit-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-01-23T20:43:57.799+08:00  INFO 50608 --- [visit-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

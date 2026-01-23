@@ -1,0 +1,92 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        # Owner Service Routes
+        - id: owner-service
+          uri: lb://owner-service
+          predicates:
+            - Path=/api/owners/**
+          filters:
+            - RewritePath=/api/owners/(?<segment>.*), /api/owners/${segment}
+
+        # Pet Service Routes
+        - id: pet-service
+          uri: lb://pet-service
+          predicates:
+            - Path=/api/pets/**
+          filters:
+            - RewritePath=/api/pets/(?<segment>.*), /api/pets/${segment}
+
+        - id: pet-type-service
+          uri: lb://pet-service
+          predicates:
+            - Path=/api/pet-types/**
+          filters:
+            - RewritePath=/api/pet-types/(?<segment>.*), /api/pet-types/${segment}
+
+        # Visit Service Routes
+        - id: visit-service
+          uri: lb://visit-service
+          predicates:
+            - Path=/api/visits/**
+          filters:
+            - RewritePath=/api/visits/(?<segment>.*), /api/visits/${segment}
+
+        # Vet Service Routes
+        - id: vet-service
+          uri: lb://vet-service
+          predicates:
+            - Path=/api/vets/**
+          filters:
+            - RewritePath=/api/vets/(?<segment>.*), /api/vets/${segment}
+
+        - id: specialty-service
+          uri: lb://vet-service
+          predicates:
+            - Path=/api/specialties/**
+          filters:
+            - RewritePath=/api/specialties/(?<segment>.*), /api/specialties/${segment}
+
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders: "*"
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,gateway
+  endpoint:
+    gateway:
+      enabled: true
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
